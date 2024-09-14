@@ -16,7 +16,7 @@ def my_calc():
             print("{} + {} = {}".format(a, b, add(a, b)))
         elif args[1] == "-":
             print("{} - {} = {}".format(a, b, sub(a, b)))
-        elif args[1] == "*":
+        elif args[1] == "/*":
             print("{} * {} = {}".format(a, b, mul(a, b)))
         elif args[1] == "/":
             print("{} / {} = {}".format(a, b, div(a, b)))
