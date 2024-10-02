@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""                                                                     This module handles basic square operations                                                                                                     It will contain functions and classes to handle calculation of the square area.
+"""
+This module handles basic square operations
+
+It will contain functions and classes to handle calculation of the square area.
 """
 
 

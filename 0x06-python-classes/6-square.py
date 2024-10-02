@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""                                                                     This module handles basic square operations                                                                                                     It will contain functions and classes to handle calculation of the square area.
+"""
+This module handles basic square operations
+It will contain functions and classes to handle calculation of the square area.
 """
 
 
@@ -47,9 +49,9 @@ class Square:
         """
         sets position to value
         """
-        if not isinstance(value, tuple) or len(value) != 2 or \
-           not all(isinstance(num, int) and num >= 0 for num in value):
-               raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value, tuple) or len(value) != 2 or not \
+                all(isinstance(num, int) and num >= 0 for num in value):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
