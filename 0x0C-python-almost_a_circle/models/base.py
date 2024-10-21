@@ -5,6 +5,7 @@ creates the base class
 import json
 import os
 
+
 class Base():
     """
     base class
