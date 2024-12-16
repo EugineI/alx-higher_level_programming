@@ -11,7 +11,7 @@ if (argc <= 2) {
   console.log('No argument');
 } else {
   argv.forEach((val, index) => {
-    if (index >= 2) {
+    if (index == 2) {
       console.log(val);
     }
   });
