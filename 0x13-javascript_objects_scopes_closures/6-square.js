@@ -8,9 +8,9 @@ class Square extends Rectangle {
     super(size, size);
   }
 
-  charPrint (c) {
+  charPrint (c = 'X') {
     const size = this.height;
-    const chr = c || 'X';
+    const chr = c;
     for (let i = 0; i < size; i++) {
       let row = '';
       for (let j = 0; j < size; j++) {
