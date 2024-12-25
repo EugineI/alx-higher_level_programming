@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 this script lists all the states from the database hbtn_0c_0_usa
 """
