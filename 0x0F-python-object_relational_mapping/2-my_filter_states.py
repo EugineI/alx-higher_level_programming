@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 """
-lists states starting with N from hbtn_0c_0_usa
+where name matches argument 4
 """
-import MySQLdb
 import sys
+import MySQLdb
+
 if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
+    searched_state = sys.argv[4]
+
     db = MySQLdb.connect(
             host="localhost",
             port=3306,
@@ -16,10 +19,10 @@ if __name__ == "__main__":
             db=database
             )
     cursor = db.cursor()
-    state_list = """
-    SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC;
+    query = """
+    SELECT id, name FROM states WHERE name = %s ORDER BY id ASC;
     """
-    cursor.execute(state_list)
+    cursor.execute(query, (searched_state, ))
     states = cursor.fetchall()
     for state in states:
         print(state)
