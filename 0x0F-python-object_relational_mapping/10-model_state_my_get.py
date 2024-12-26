@@ -10,6 +10,7 @@ if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2].replace('@', '%40')
     database = sys.argv[3]
+    state_name = sys.argv[4]
     engine = create_engine(
             'mysql+mysqldb://{}:{}@localhost:3306/{}'.
             format(username, password, database),
@@ -18,12 +19,9 @@ if __name__ == '__main__':
     Base.metadata.bind = engine
     NewSession = sessionmaker(bind=engine)
     session = NewSession()
-    states = (
-            session.query(State)
-            .filter(State.name.like('%a%'))
-            .order_by(State.id.asc())
-            .all()
-            )
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    state = session.query(State).filter(State.name == state_name).first()
+    if state:
+        print(state.id)
+    else:
+        print("Not found")
     session.close()
