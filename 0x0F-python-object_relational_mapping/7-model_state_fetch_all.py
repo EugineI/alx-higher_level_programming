@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
     username = sys.argv[1]
-    password = sys.argv[2]
+    password = sys.argv[2].replace('@', '%40')
     database = sys.argv[3]
 
     engine = create_engine(
@@ -27,5 +27,5 @@ if __name__ == '__main__':
     states = session.query(State).order_by(State.id.asc()).all()
 
     for state in states:
-        print("{}:{}".format(state.id, state.name))
+        print("{}: {}".format(state.id, state.name))
     session.close()
