@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 """
-where name matches argument 4
+search city by state
 """
 import sys
 import MySQLdb
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    st = sys.argv[4]
+    state_name = sys.argv[4]
 
     db = MySQLdb.connect(
             host="localhost",
@@ -19,10 +18,14 @@ if __name__ == "__main__":
             db=database
             )
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(st)
-    cursor.execute(query)
-    states = cursor.fetchall()
-    for state in states:
-        print(state)
+    query = """
+    SELECT cities.name FROM cities
+    JOIN states ON cities.state_id = states.id
+    WHERE states.name = %s
+    ORDER BY cities.id ASC;
+    """
+    cursor.execute(query, (state_name,))
+    cities = cursor.fetchall()
+    print(", ".join(city[0] for city in cities))
     cursor.close()
     db.close()

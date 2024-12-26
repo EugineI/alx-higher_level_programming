@@ -17,7 +17,7 @@ if __name__ == "__main__":
             )
     cursor = db.cursor()
     state_list = """
-    SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC;
+    SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC;
     """
     cursor.execute(state_list)
     states = cursor.fetchall()
