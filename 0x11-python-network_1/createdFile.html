@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eugine Indimuli - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="home" class="hero">
+        <h1>Hi, I'm Eugine Indimuli</h1>
+        <p> "A Software Engineer with skills in Python, C, HTML, CSS, and JavaScript. I have a solid foundation in developing console applications and a passion for creating impactful solutions. My experiences include maintaining a point-of-sale system for a local supermarket and co-developing a records management system for the University of Nairobi, where I gained backend experience using Go. Looking forward, I'm eager to build a platform to empower farmers by providing fair-market access, extension services, and resources to improve crop quality. I'm excited to bring my technical and problem-solving skills to innovative projects."
+
+        </p>
+        <a href="#projects" class="cta-button">View My Work</a>
+    </section>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <h3>Point-of-Sale System</h3>
+                <p>Contributed to the maintenance of a POS system for a local supermarket.</p>
+            </div>
+            <div class="project-card">
+                <h3>Attachment Records System</h3>
+                <p>Developed a system for keeping attachment records at the University of Nairobi using Go for the backend.</p>
+                <a href="https://github.com/EugineI/attachee" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Homedent Dental Clinic</h3>
+                <p>Developed a dental clinic website .</p>
+                <a href="https://github.com/EugineI/homident" target="_blank">View on GitHub</a>
+                <a href="https://homedent-homedents-projects.vercel.app/" target = "_blank">visit Homedent</a>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <label>Python</label>
+            <div class="progress-bar"><span style="width: 80%;"></span></div>
+        </div>
+        <div class="skill">
+            <label>C</label>
+            <div class="progress-bar"><span style="width: 70%;"></span></div>
+        </div>
+        <div class="skill">
+            <label>HTML & CSS</label>
+            <div class="progress-bar"><span style="width: 90%;"></span></div>
+        </div>
+        <div class="skill">
+            <label>JavaScript</label>
+            <div class="progress-bar"><span style="width: 60%;"></span></div>
+        </div>
+        <div class="skill">
+            <label>Linux: shell</label>
+            <div class="progress-bar"><span style="width: 60%;"></span></div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/xpwzrbra" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
