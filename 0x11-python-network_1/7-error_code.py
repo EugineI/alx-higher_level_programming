@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 import requests
 import sys
-
+"""
+Error code
+"""
 if __name__ == "__main__":
     url = sys.argv[1]
     response = requests.get(url)
